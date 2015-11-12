@@ -41,7 +41,7 @@ class Window():
         self.window.setAutoFillBackground(True)
         self.window.setBackgroundRole(QPalette.AlternateBase if isDark else QPalette.Dark)
         
-        self.window.setWindowIcon(QIcon('../assets/icon.png'))
+        self.window.setWindowIcon(QIcon('../assets/favicon.png'))
         
         QToolTip.setFont(QFont('SansSerif', 10))
         
