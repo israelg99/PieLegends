@@ -35,7 +35,10 @@ class Window():
         
         self.window.setWindowTitle(title  + " " + version)
         
-        self.window.resize(width, height)
+        self.sizeWindow(width, height)
+        
+        self.window.statusBar().setSizeGripEnabled(False)
+        
         self.centerWindow();
         
         self.window.setAutoFillBackground(True)
@@ -48,6 +51,12 @@ class Window():
         self.initCentralWidget(isDark);
         
         self.window.show()
+        
+    def sizeWindow(self, width, height):
+        self.window.resize(width, height)
+        self.window.setMaximumSize(width, height)
+        self.window.setMinimumSize(width, height)
+        self.window.setFixedSize(width, height)
         
     def centerWindow(self):
         qr = self.window.frameGeometry()
